@@ -9,9 +9,7 @@ python3 receiver.py -d -p 5555 -n 100 -e 0 -o kali.txt
 python3 sender.py -s [RECEIVER IP ADDRESS] -d -p 5555 -n 400 -l 512 -r 100 -w 3 -f 10 -file kali.txt
 ```
 ## Configuration
-- `receiver.py`
-```
-Description:
+### receiver.py
 
 -d or --debug: This argument is optional and does not take any value (action='store_true'). When present, it turns on the debug mode.
 
@@ -23,11 +21,8 @@ Packet Error Rate:
 -e or --pktErrRate: This argument is required and expects a float value. It represents the packet error rate or the probability of a packet being dropped.
 
 -o or --output: This argument is required and expects a string value. It represents the path where the received file will be saved.
-```
 
-- `sender.py`
-```
-Description:
+### sender.py
 
 -d or --debug: This argument is optional and does not take any value (action='store_true'). When present, it turns on the debug mode.
 
@@ -46,6 +41,3 @@ Description:
 -f or --maxBufSize: This argument is required and expects an integer value. It represents the maximum size of the buffer.
 
 -file or --file: This argument is required and expects a string value. It represents the path to the file to be sent.
-```
-
-- 
